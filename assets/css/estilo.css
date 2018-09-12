@@ -52,8 +52,6 @@ body {
 	display:flex;
 	justify-content:center;
 	background-color: #5093bd;
-	padding-bottom: 07%;
-
 }
 .geral-int {
 	text-align: center;
@@ -62,7 +60,7 @@ body {
 
 }
 .foto-perfil img {
-    margin-top: 50px;
+    margin-top: 10px;
     box-shadow: 2px 30px 30px rgba(0, 0, 0, 0.12);
     border-radius: 50%;
     /* border: 2px solid #222; */
@@ -70,14 +68,26 @@ body {
 	width: 200px;
  overflow:hidden; 
 }
+.atribuicoes a {
+	color:#000;
+}
 .email a {
-	text-decoration: none;
+	
 	color:#000;
 }   
 .tel a {
-	text-decoration: none;
+	
 	color:#000;
-}   
+}  
+.git {
+	    padding-bottom: 15px;
+} 
+.git img {
+    box-shadow: 0px 0px 47px 0 rgba(8,0,0,0.75);
+    border-radius: 50%;
+    align-self: center;
+    padding: 5px;
+}
 .social {
 	display: flex;
 	justify-content: center;
