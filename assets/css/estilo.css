@@ -1,11 +1,18 @@
 *
 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: 'PT Sans', sans-serif;
+}
+{
 	font-family: PT Sans,sans-serif;
 }
-body {
-	margin: 0;
-	padding: 0;
-}    
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* remove rolagem */
+}   
 #topo {
 	display: flex;
 	justify-content: center;
@@ -72,19 +79,25 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
+	height: 100vh; /* ocupa exatamente a tela */
 	background-color: #5093bd;
+	position: relative; /*ESSENCIAL */
 }
 
 .geral-int {
-	text-align: center;
+	/*text-align: center;*/
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* espaço controlado entre itens */
 }
 .foto-perfil {
 
 }
 .foto-perfil img {
     margin-top: 10px;
-    box-shadow: 0px 6px 15px 15px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
     border: 1px solid #888;
     width: 200px;
@@ -119,12 +132,17 @@ body {
 	overflow:hidden; 
 }*/
 .social {
-	display: flex;
+	position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 10px;
+	gap: 12px;
 	padding: 10px 0;
+	margin-top: 15px;
 }
 .social img {
     width: 30px;
