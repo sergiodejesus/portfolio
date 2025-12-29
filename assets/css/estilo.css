@@ -169,4 +169,11 @@ h1, h2, h3, p {
     .social img {
         width: 30px;
     }
+   .social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 8px;
+}
+
 }
