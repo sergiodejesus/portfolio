@@ -1,183 +1,170 @@
-*
-{
+/* =========================
+   RESET GLOBAL E PADRÕES
+   ========================= */
+* {
     margin: 0;
     padding: 0;
-    /*box-sizing: border-box;*/
-	font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box; /* ESSENCIAL para layout previsível */
+    font-family: 'PT Sans', sans-serif;
 }
-{
-	font-family: PT Sans,sans-serif;
-}
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* remove rolagem */
-}   
-#topo {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	color: white;
-	background-color: #75747040;
-	overflow:hidden; 	
-}
-/*.container {
-	display: block;
-	justify-content: center;
-	width: 990px;
-	align-items: center;
-	overflow:hidden; 
-}*/
-.container {
-	width: 100%;
-	max-width: 990px;
-	margin: 0 auto;
-	padding: 0 16px;
-	box-sizing: border-box;
-}
-/*.topo-int {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	overflow:hidden; 
-	height: 45px;
-}*/
-.topo-int {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	min-height: 45px;
-	flex-wrap: wrap;
-}
-.tr-br {
-	flex: 1;
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.tr-br a {
-	text-decoration: none;
-	color: white;
 
+/* =========================
+   ESTRUTURA BASE DA PÁGINA
+   ========================= */
+html, body {
+    height: 100%;
 }
+
+/* Corpo como layout flex vertical:
+   Topo → Conteúdo → Rodapé */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   TOPO
+   ========================= */
+#topo {
+    width: 100%;
+    background-color: #75747040;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.topo-int {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 45px;
+    flex-wrap: wrap;
+}
+
+.tr-br,
 .tr-in {
-	flex: 1;
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 10px;
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
 }
+
+.tr-br a,
 .tr-in a {
-	text-decoration: none;
-	color: white;
+    text-decoration: none;
+    color: white;
 }
-/*#geral {
-	display:flex;
-	justify-content:center;
-	background-color: #5093bd;
-}*/
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+   ========================= */
 #geral {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/*min-height: 100vh;*/
-	height: 100vh; /* ocupa exatamente a tela */
-	background-color: #5093bd;
-	position: relative; /*ESSENCIAL */
+    flex: 1; /* OCUPA TODO ESPAÇO ENTRE TOPO E RODAPÉ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5093bd;
 }
 
 .geral-int {
-	/*text-align: center;*/
-	display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px; /* espaço controlado entre itens */
+    gap: 12px;
+    text-align: center;
 }
-.foto-perfil {
 
-}
+/* =========================
+   FOTO DE PERFIL
+   ========================= */
 .foto-perfil img {
     margin-top: 10px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+    width: 200px;
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
     border: 1px solid #888;
-    width: 200px;
-	max-width: 100%;
-	height: auto;
-} 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   TEXTOS E LINKS
+   ========================= */
+.email a,
+.tel a,
 .atribuicoes a {
-	color:#000;
+    color: #000;
+    text-decoration: none;
 }
-.email a {
-	
-	color:#000;
-}   
-.tel a {
-	
-	color:#000;
-}  
+
+h1, h2, h3, p {
+    word-wrap: break-word;
+}
+
+/* =========================
+   ÍCONE GITHUB (PROJETOS)
+   ========================= */
 .git {
-	    padding-bottom: 15px;
-} 
+    padding-bottom: 15px;
+}
+
 .git img {
-    box-shadow: 0px 0px 47px 0 rgba(8,0,0,0.75);
-    border-radius: 50%;
-    align-self: center;
     padding: 9px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 47px rgba(8, 0, 0, 0.75);
 }
-/*.social {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	background-color: #75747069;
-	overflow:hidden; 
-}*/
+
+/* =========================
+   RODAPÉ (IGUAL AO TOPO)
+   ========================= */
+.footer {
+    width: 100%;
+    background-color: #75747040;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+/* Ícones sociais */
 .social {
-	position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-  	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 12px;
-	padding: 10px 0;
-	margin-top: 15px;
+    display: flex;
+    gap: 15px;
 }
+
 .social img {
     width: 30px;
-    box-shadow: 0px 2px 20px 0 rgba(1,0,0,0.75);
-    border-radius: 39%;
-    align-self: center;
-    padding: 5px;
-    margin: 5px;
+    padding: 6px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
 }
-h1, h2, h3, p {
-	word-wrap: break-word;
-}
-/*Responsivo para cel*/
 
-/*@media (max-width:568px) {
-	.git img {
-		padding: 5px;
-	}
-	.foto-perfil img {
-		width: 150px;
-	}
-}*/
-
-/*Responsivo para cel*/
+/* =========================
+   RESPONSIVO – MOBILE
+   ========================= */
 @media (max-width: 568px) {
-	h1 {
-		font-size: 22px;
-	}
-	h2 {
-		font-size: 18px;
-	}
-	p {
-		font-size: 14px;
-	}
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .foto-perfil img {
+        width: 150px;
+    }
+
+    .social img {
+        width: 26px;
+    }
 }
-
-
-
