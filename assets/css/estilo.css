@@ -36,7 +36,7 @@ body {
 .container {
     width: 100%;
     max-width: 990px;
-    margin: 0 auto;
+    margin: -2 auto;
     padding: 0 16px;
 }
 
@@ -135,6 +135,8 @@ h1, h2, h3, p {
 .social {
     display: flex;
     gap: 15px;
+    justify-content: center;
+    margin: 8px;
 }
 
 .social img {
