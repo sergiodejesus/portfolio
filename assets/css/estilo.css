@@ -4,7 +4,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* ESSENCIAL para layout previsível */
+  /*box-sizing: border-box;*/ /* ESSENCIAL para layout previsível */
     font-family: 'PT Sans', sans-serif;
 }
 
